@@ -5,9 +5,9 @@ from src.prediction import PredictorFatory
 
 EXAMPLE_PATH = './assets/examples'
 MODEL_PATH = './model/'
-DEFAULT_MODEL = 'xception_weights-24-0.59.hdf5'
+DEFAULT_MODEL = 'xception_299_299.hdf5'
 EXAMPLES = [[EXAMPLE_PATH + '/' + file, DEFAULT_MODEL] for file in os.listdir(EXAMPLE_PATH)]
-CLASSES = ['人物', '道具','自然风光', '机械', '城市建筑', '室内']
+CLASSES = ['Figure 人物 ', 'Item 道具','Landscape 自然风光', 'Machine 机械', 'City 城市建筑', 'Indoor 室内']
 
 
 def entry(image, model_choice):

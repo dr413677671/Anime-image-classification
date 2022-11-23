@@ -17,9 +17,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/dr413677671/Anime-image-classification">
-    <img src="images/logo.png" alt="Logo" width="206.25" height="131.25">
-  </a>
+
 
   <h3 align="center">Anime Classification</h3>
   <p align="center">
@@ -40,7 +38,7 @@
 <!-- ABOUT THE PROJECT -->
 
 <div align=center>
-<img src='./images/front.JPG'>
+<img src='./front.JPG'>
 </div>
 
 ## About this project
