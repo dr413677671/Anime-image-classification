@@ -22,10 +22,10 @@
   <h3 align="center">Anime Theme Classification</h3>
   <p align="center">
     <br />
-    <a href="https://github.com/dr413677671/Anime-image-classification/README.md"><strong>Explore the docs »</strong></a>
+    <a href="https://huggingface.co/spaces/darkCat/Anime-image-classification"><strong>Play the model »</strong></a>
     <br />
     <br />
-    <a href="https://huggingface.co/spaces/darkCat/Anime-image-classification">Play the model</a>
+    <a href="https://github.com/dr413677671/Anime-image-classification/README.md">Explore the docs</a>
     ·
     <a href="https://github.com/dr413677671/Anime-image-classification/issues">Report Bug</a>
     ·
