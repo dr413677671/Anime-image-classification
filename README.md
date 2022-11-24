@@ -19,14 +19,13 @@
 <div align="center">
 
 
-  <h3 align="center">Anime Classification</h3>
+  <h3 align="center">Anime Theme Classification</h3>
   <p align="center">
-    Anime theme classification.
     <br />
     <a href="https://github.com/dr413677671/Anime-image-classification/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://www.youtube.com/watch?v=9U6-moIJUkk">Run in HuggingFace</a>
+    <a href="https://huggingface.co/spaces/darkCat/Anime-image-classification">Play the model</a>
     ·
     <a href="https://github.com/dr413677671/Anime-image-classification/issues">Report Bug</a>
     ·

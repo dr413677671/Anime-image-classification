@@ -22,4 +22,4 @@ gr.Interface(fn=entry,
             inputs=[gr.Image(), gr.inputs.Dropdown(choices=list_models(MODEL_PATH), type="value", default=DEFAULT_MODEL)],
             outputs=gr.Label(num_top_classes=len(CLASSES)),
             examples=EXAMPLES,
-            title = "Anime Style Classification").launch()
+            title = "Anime Theme Classification").launch()
