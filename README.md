@@ -17,10 +17,9 @@
 </div>
 
 <div align="center">
-
-
   <h3 align="center">Anime Theme Classification</h3>
   <p align="center">
+    Anime image theme classification webApp.
     <br />
     <a href="https://huggingface.co/spaces/darkCat/Anime-image-classification"><strong>Play the model »</strong></a>
     <br />
