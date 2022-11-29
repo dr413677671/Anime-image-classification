@@ -7,7 +7,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-
 </div>
 
 <div align="center">
@@ -15,7 +14,6 @@
     <img src="assets/logo.png" alt="Logo" width="384" height="216">
   </a>
 </div>
-
 <div align="center">
   <h3 align="center">Anime Theme Classification</h3>
   <p align="center">
