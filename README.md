@@ -12,8 +12,12 @@
 <!-- [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url] -->
 
-
-
+<br />
+<div align="center">
+  <a href="https://github.com/dr413677671/Anime-image-classification">
+    <img src="assets/logo.png" alt="Logo" width="384" height="216">
+  </a>
+</div>
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -44,7 +48,8 @@
 
 Anime image theme classification. Home-trained model. Will open-source training and models later.
 
-## Support:
+## Features:
+
 - [x] Model
     - [x] Xception
     - [ ] SWIN2 (TBD)
@@ -61,9 +66,23 @@ Anime image theme classification. Home-trained model. Will open-source training 
 - [ ] Ensemble Learning
 - [x] Others
     - [x] Early-stopping
-    - [ ] Finetune
+    - [x] Finetune
+    - [x] Optimizer-Adam
+    - [x] Multi-labels classification
+    - [ ] Class-weighting
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contact
+<br>
+
+[<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg' alt='github' margin='10px' height='40'>](https://github.com/https://github.com/dr413677671) &nbsp;&nbsp; [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/youtube.svg' alt='YouTube' height='40'>](https://www.youtube.com/channel/https://www.youtube.com/@randuan9718/videos) &nbsp;&nbsp; [<img src='https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/zhihu.svg' alt='zhihu' height='40'>](https://www.zhihu.com/people/kumonoue) 
+
+## Acknowledgments
+
+* [Xception](https://www.tensorflow.org/api_docs/python/tf/keras/applications/xception/Xception)
+* [Gradio](https://github.com/gradio-app/gradio)
+* Logo genetrared by <a href="https://github.com/CompVis/stable-diffusion">Stable-Diffusion</a>
 
 [contributors-shield]: https://img.shields.io/github/contributors/dr413677671/Anime-image-classification.svg?style=for-the-badge
 [contributors-url]: https://github.com/dr413677671/Anime-image-classification/graphs/contributors
