@@ -9,17 +9,13 @@
 [![Issues][issues-shield]][issues-url]
 
 </div>
-<!-- [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url] -->
 
-<br />
 <div align="center">
   <a href="https://github.com/dr413677671/Anime-image-classification">
     <img src="assets/logo.png" alt="Logo" width="384" height="216">
   </a>
 </div>
-<!-- PROJECT LOGO -->
-<br />
+
 <div align="center">
 
 
