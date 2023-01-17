@@ -39,7 +39,11 @@
 
 ## About this project
 
-Anime image theme classification. Home-trained model. Will open-source training and models later.
+Anime theme classification.
+
+One stage classification (home-trained) + combined background matting.
+
+<img src='./illustration_preview.png'>
 
 ## Features:
 
@@ -74,6 +78,8 @@ Anime image theme classification. Home-trained model. Will open-source training 
 ## Acknowledgments
 
 * [Xception](https://www.tensorflow.org/api_docs/python/tf/keras/applications/xception/Xception)
+* [Background Matting](https://github.com/PeterL1n/BackgroundMattingV2#model--weights)
+* [Background Segmentation](https://github.com/nikhilroxtomar/Remove-Photo-Background-using-TensorFlow)
 * [Gradio](https://github.com/gradio-app/gradio)
 * Logo genetrared by <a href="https://github.com/CompVis/stable-diffusion">Stable-Diffusion</a>
 
