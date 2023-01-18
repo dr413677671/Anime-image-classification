@@ -5,6 +5,7 @@ from src.utils import list_models
 from src.prediction import PredictorFatory
 import cv2
 import copy
+import operator
 
 EXAMPLE_PATH = './assets/examples'
 MODEL_PATH = './model/'
@@ -26,12 +27,11 @@ def entry(image, model_choice, enhance=False):
   cls_ret = None
   if 'xception' in model_choice:
     predictor = factory.get_predictor('xception')
-    
-    
     if 'matting' in model_choice:
       mat_pridictior = factory.get_matting(MATTING_WEIGHT)
       pha, fgr  = mat_pridictior.predict(image)
       cls_ret = predictor.predict(image)
+      return cls_ret, None
     elif enhance:
       segmentor = factory.get_seg(SEG_MODEL)
       seg = segmentor.predict(copy.deepcopy(image))
@@ -44,19 +44,27 @@ def entry(image, model_choice, enhance=False):
 
       # max connected components
       num_labels, labels, stats, centroids = cv2.connectedComponentsWithStats(seg, connectivity=8)
-      area = 0
+      area = np.sum(labels)
       weight = 0.9
-      for i in range(num_labels):
-        if stats[i][-1] > area:
-          area = stats[i][-1]
-          idx = i
+      idx = 0
+      for i in range(num_labels-1):
+        if stats[i+1][-1] > area:
+          idx = i+1
       if area > image.shape[0] * image.shape[1] * 0.02:
         cls_ret[CLASSES[0]] = weight + (1-weight) * cls_ret[CLASSES[0]]
         cv2.putText(image, LABELS[0], (int(centroids[idx][0]), int(centroids[idx][1])), cv2.FONT_HERSHEY_SIMPLEX, 1, (55,255,155), 2)
 
       contours, hierarchy = cv2.findContours(seg.astype(np.uint8), cv2.RETR_LIST, 2)
       cv2.drawContours(image, contours, -1, (0, 0, 255), 2)
-      cv2.putText(image, LABELS[np.where(list(cls_ret.values())==np.max(list(cls_ret.values())[1:]))[0][0]], (20, 35), cv2.FONT_HERSHEY_SIMPLEX, 1, (55,255,155), 2)
+
+      text = ""
+      a = sorted(copy.deepcopy(cls_ret).items(),key=operator.itemgetter(1), reverse=True)
+      for i, value in enumerate(a):
+        pred = value[1]
+        name = value[0]
+        if pred != 0 and pred >= 0.05:
+          text += "  "+name.split(" ")[0] + ": " + str(round(pred, 2))
+      cv2.putText(image, text, (int(image.shape[1]/7), 35), cv2.FONT_HERSHEY_SIMPLEX, .5 * image.shape[1] / 557 , (55,255,155), int(1.78 * image.shape[1] / 557))
 
       # cv2.imshow("seg", seg)
       # cv2.imshow("cls_image", cls_image)
@@ -64,8 +72,10 @@ def entry(image, model_choice, enhance=False):
       
       # cv2.waitKey(0)
       # cv2.destroyAllWindows()
-
-    return cls_ret, image
+      return cls_ret, image
+    else:
+      cls_ret = predictor.predict(image)
+      return cls_ret, None
 
   elif "SWIN2" in model_choice:
     pass
